@@ -9,9 +9,8 @@ fetch("quotes.json")
     return response.json();
   })
   .then(function(jsonData) {
-    console.log(jsonData);
-    // data = jsonData;
-    // getQuote();
+    data = jsonData;
+    getQuote();
   });
 
 const getQuote = function() {
