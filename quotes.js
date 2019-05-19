@@ -4,6 +4,14 @@ const randomTag = document.querySelector("footer img");
 
 let data = [];
 
+fetch("quotes.json")
+  .then(function(response) {
+    return response.json();
+  })
+  .then(function(jsonData) {
+    data = jsonData;
+  });
+
 const getQuote = function() {
   if (data.length > 0) {
     const randomNumber = Math.floor(Math.random() * data.length);
